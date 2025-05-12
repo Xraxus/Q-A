@@ -1,0 +1,44 @@
+# === BACKEND: Symfony (back-end/) ===
+back-end/vendor/
+back-end/var/
+back-end/.cache/
+back-end/.phar/
+back-end/.php_cs.cache
+back-end/.phpunit.result.cache
+back-end/public/bundles/
+back-end/*.log
+back-end/*.swp
+back-end/.env
+back-end/.env.local
+back-end/.env.*.local
+
+# === FRONTEND: React (front-end/) ===
+front-end/node_modules/
+front-end/build/
+front-end/dist/
+front-end/dist-ssr/
+front-end/public/static/
+front-end/coverage/
+front-end/.vite/
+front-end/.env
+front-end/*.local
+front-end/npm-debug.log*
+front-end/yarn-debug.log*
+front-end/yarn-error.log*
+front-end/pnpm-debug.log*
+front-end/lerna-debug.log*
+
+# === Ogólne ===
+*.log
+logs/
+
+# === Edytory ===
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
