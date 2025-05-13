@@ -3,7 +3,7 @@ version: '3'
 services:
   apache:
     build: .docker/apache
-    container_name: symfony_apache_qa
+    container_name: symfony_apache
     ports:
       - "8000:80"
     volumes:
@@ -16,7 +16,7 @@ services:
     image: mysql:8.3
     ports:
       - "3307:3306"
-    container_name: symfony_mysql_qa
+    container_name: symfony_mysql
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: symfony
@@ -27,7 +27,7 @@ services:
     image: mysql:8.3
     ports:
       - "3308:3306"
-    container_name: symfony_mysql_test_qa
+    container_name: symfony_mysql_test
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: symfony_test
@@ -36,7 +36,7 @@ services:
 
   php:
     build: .docker/php
-    container_name: symfony_php_qa
+    container_name: symfony_php
     volumes:
       - ./app:/home/wwwroot/app
     environment:
@@ -47,6 +47,6 @@ services:
 
   maildev:
     image: djfarrelly/maildev
-    container_name: symfony_maildev_qa
+    container_name: symfony_maildev
     ports:
       - "8001:80"
